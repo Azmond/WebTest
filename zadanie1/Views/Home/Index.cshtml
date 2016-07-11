@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="section">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12" id="content">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+    <div class="row" ng-controller="NavigationController">
+        <div class="col-md-5">
+            <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" items-per-page="pageSize" max-size="maxSize" class="pagination-sm" style="margin-top:auto" boundary-link-numbers="true"></uib-pagination>
+        </div>
+        <div class="col-md-3" style="">
+            
+                <p id="allrec">Всего записей:</p>
+            
+        </div>
+        <div class="col-md-4 text-right">
+            <div class="btn-group btn-group-sm">
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'10'">10</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'20'">20</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'30'">30</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'40'">40</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'50'">50</label>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/angular")
+@Scripts.Render("~/bundles/tablehandler")
